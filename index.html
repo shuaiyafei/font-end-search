@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>前端搜索</title>
+	<script type='text/javascript' src='http://libs.baidu.com/jquery/2.0.0/jquery.min.js'></script>
+</head>
+<body>
+	<!-- 这里只是一组数据模板，展示效果用的，有时间应当做个改进，让搜索js更加抽象，更加组件化 -->
+	<div class="c-search">
+		<input class="text" type="text" name="" id="" placeholder="找应用">
+	</div>
+	<div class="table">
+			<table width="100%">
+				<tbody>
+					<tr bgcolor="#f2f2f2">
+						<th colspan="2">名称</th>
+						<th>APPID</th>
+						<th>应用类型</th>
+						<th>状态</th>
+						<th>创建时间</th>
+						<th>操作</th>
+					</tr>
+					<tr style="display: table-row;">
+						<td valign="middle" style="text-align:right;">
+							<a href="/open/Apps/appinit?appid=100087">
+								<img src="http://static.dev-5.tiup.us//open/img/default_icon.png" alt="" width="50px" height="50px">
+							</a>
+						</td>
+					<td valign="middle" style="text-align:left;" class="queryName">
+						<a href="/open/Apps/appinit?appid=100087">tgtg</a>
+					</td>
+					<td>100087</td>
+					<td>站内应用</td>
+					<td>
+																	开发中											</td>
+					<td>2015-08-25 10:22:04</td>
+					<td>
+						<a href="/open/Apps/editBaseInfo?appid=100087">编辑信息</a><br>
+						<a class="del-app" href="#" data-appname="tgtg" data-appid="100087">删除应用</a>
+					</td>
+				</tr><tr bgcolor="#f2f2f2" style="display: table-row;">
+									<td valign="middle" style="text-align:right;">
+					<a href="/open/Apps/appinit?appid=100085">
+									              <img src="http://static.dev-5.tiup.us//open/img/default_icon.png" alt="" width="50px" height="50px">
+					</a></td>
+					<td valign="middle" style="text-align:left;" class="queryName"><a href="/open/Apps/appinit?appid=100085">wangzheng</a></td>
+					<td>100085</td>
+					<td>站内应用</td>
+					<td>
+											已上线										</td>
+					<td>2015-08-17 15:42:12</td>
+					<td>
+						<a href="/open/Apps/editBaseInfo?appid=100085">编辑信息</a><br>
+						<a class="del-app" href="#" data-appname="wangzheng" data-appid="100085">删除应用</a>
+					</td>
+				</tr>				<tr style="display: table-row;">					<td valign="middle" style="text-align:right;">
+					<a href="/open/Apps/appinit?appid=100082">
+									              <img src="http://static.dev-5.tiup.us//open/img/default_icon.png" alt="" width="50px" height="50px">
+					</a></td>
+					<td valign="middle" style="text-align:left;" class="queryName"><a href="/open/Apps/appinit?appid=100082">mingcheng12</a></td>
+					<td>100082</td>
+					<td>站内应用</td>
+					<td>
+																	开发中											</td>
+					<td>2015-07-20 10:15:18</td>
+					<td>
+						<a href="/open/Apps/editBaseInfo?appid=100082">编辑信息</a><br>
+						<a class="del-app" href="#" data-appname="mingcheng12" data-appid="100082">删除应用</a>
+					</td>
+				</tr><tr bgcolor="#f2f2f2" style="display: table-row;">
+									<td valign="middle" style="text-align:right;">
+					<a href="/open/Apps/appinit?appid=100081">
+									              <img src="http://static.dev-5.tiup.us//open/img/default_icon.png" alt="" width="50px" height="50px">
+					</a></td>
+					<td valign="middle" style="text-align:left;" class="queryName"><a href="/open/Apps/appinit?appid=100081">ceshixuexiao1</a></td>
+					<td>100081</td>
+					<td>站内应用</td>
+					<td>
+																	开发中											</td>
+					<td>2015-07-20 10:06:14</td>
+					<td>
+						<a href="/open/Apps/editBaseInfo?appid=100081">编辑信息</a><br>
+						<a class="del-app" href="#" data-appname="ceshixuexiao1" data-appid="100081">删除应用</a>
+					</td>
+				</tr>				<tr style="display: table-row;">					<td valign="middle" style="text-align:right;">
+					<a href="/open/Apps/appinit?appid=100079">
+									              <img src="http://static.dev-5.tiup.us//open/img/default_icon.png" alt="" width="50px" height="50px">
+					</a></td>
+					<td valign="middle" style="text-align:left;" class="queryName"><a href="/open/Apps/appinit?appid=100079">ceshixuexiao</a></td>
+					<td>100079</td>
+					<td>站内应用</td>
+					<td>
+																	开发中											</td>
+					<td>2015-07-20 10:03:11</td>
+					<td>
+						<a href="/open/Apps/editBaseInfo?appid=100079">编辑信息</a><br>
+						<a class="del-app" href="#" data-appname="ceshixuexiao" data-appid="100079">删除应用</a>
+					</td>
+				</tr><tr bgcolor="#f2f2f2" style="display: table-row;">
+									<td valign="middle" style="text-align:right;">
+					<a href="/open/Apps/appinit?appid=100078">
+									              <img src="http://static.dev-5.tiup.us//open/img/default_icon.png" alt="" width="50px" height="50px">
+					</a></td>
+					<td valign="middle" style="text-align:left;" class="queryName"><a href="/open/Apps/appinit?appid=100078">07200948</a></td>
+					<td>100078</td>
+					<td>站内应用</td>
+					<td>
+																	开发中											</td>
+					<td>2015-07-20 09:57:35</td>
+					<td>
+						<a href="/open/Apps/editBaseInfo?appid=100078">编辑信息</a><br>
+						<a class="del-app" href="#" data-appname="07200948" data-appid="100078">删除应用</a>
+					</td>
+				</tr>				<tr style="display: table-row;">					<td valign="middle" style="text-align:right;">
+					<a href="/open/Apps/appinit?appid=100077">
+									              <img src="http://static.dev-5.tiup.us//open/img/default_icon.png" alt="" width="50px" height="50px">
+					</a></td>
+					<td valign="middle" style="text-align:left;" class="queryName"><a href="/open/Apps/appinit?appid=100077">07200947</a></td>
+					<td>100077</td>
+					<td>站内应用</td>
+					<td>
+																	开发中											</td>
+					<td>2015-07-20 09:56:52</td>
+					<td>
+						<a href="/open/Apps/editBaseInfo?appid=100077">编辑信息</a><br>
+						<a class="del-app" href="#" data-appname="07200947" data-appid="100077">删除应用</a>
+					</td>
+				</tr><tr bgcolor="#f2f2f2" style="display: table-row;">
+									<td valign="middle" style="text-align:right;">
+					<a href="/open/Apps/appinit?appid=100076">
+									              <img src="http://static.dev-5.tiup.us//open/img/default_icon.png" alt="" width="50px" height="50px">
+					</a></td>
+					<td valign="middle" style="text-align:left;" class="queryName"><a href="/open/Apps/appinit?appid=100076">07200944</a></td>
+					<td>100076</td>
+					<td>站内应用</td>
+					<td>
+											已上线										</td>
+					<td>2015-07-20 09:53:38</td>
+					<td>
+						<a href="/open/Apps/editBaseInfo?appid=100076">编辑信息</a><br>
+						<a class="del-app" href="#" data-appname="07200944" data-appid="100076">删除应用</a>
+					</td>
+				</tr>				<tr style="display: table-row;">					<td valign="middle" style="text-align:right;">
+					<a href="/open/Apps/appinit?appid=100075">
+									              <img src="http://static.dev-5.tiup.us//open/img/default_icon.png" alt="" width="50px" height="50px">
+					</a></td>
+					<td valign="middle" style="text-align:left;" class="queryName"><a href="/open/Apps/appinit?appid=100075">1212121212112</a></td>
+					<td>100075</td>
+					<td>站内应用</td>
+					<td>
+																	开发中											</td>
+					<td>2015-07-14 17:07:46</td>
+					<td>
+						<a href="/open/Apps/editBaseInfo?appid=100075">编辑信息</a><br>
+						<a class="del-app" href="#" data-appname="1212121212112" data-appid="100075">删除应用</a>
+					</td>
+				</tr><tr bgcolor="#f2f2f2" style="display: table-row;">
+									<td valign="middle" style="text-align:right;">
+					<a href="/open/Apps/appinit?appid=100074">
+									              <img src="http://static.dev-5.tiup.us//open/img/default_icon.png" alt="" width="50px" height="50px">
+					</a></td>
+					<td valign="middle" style="text-align:left;" class="queryName"><a href="/open/Apps/appinit?appid=100074">ceshi123123</a></td>
+					<td>100074</td>
+					<td>站内应用</td>
+					<td>
+																	开发中											</td>
+					<td>2015-07-14 17:06:48</td>
+					<td>
+						<a href="/open/Apps/editBaseInfo?appid=100074">编辑信息</a><br>
+						<a class="del-app" href="#" data-appname="ceshi123123" data-appid="100074">删除应用</a>
+					</td>
+				</tr>				<tr style="display: table-row;">					<td valign="middle" style="text-align:right;">
+					<a href="/open/Apps/appinit?appid=100073">
+									              <img src="http://static.dev-5.tiup.us//open/img/default_icon.png" alt="" width="50px" height="50px">
+					</a></td>
+					<td valign="middle" style="text-align:left;" class="queryName"><a href="/open/Apps/appinit?appid=100073">ceshiapp1234567</a></td>
+					<td>100073</td>
+					<td>站内应用</td>
+					<td>
+																	开发中											</td>
+					<td>2015-07-13 14:34:13</td>
+					<td>
+						<a href="/open/Apps/editBaseInfo?appid=100073">编辑信息</a><br>
+						<a class="del-app" href="#" data-appname="ceshiapp1234567" data-appid="100073">删除应用</a>
+					</td>
+				</tr><tr bgcolor="#f2f2f2" style="display: table-row;">
+									<td valign="middle" style="text-align:right;">
+					<a href="/open/Apps/appinit?appid=100072">
+									              <img src="http://static.dev-5.tiup.us//open/img/default_icon.png" alt="" width="50px" height="50px">
+					</a></td>
+					<td valign="middle" style="text-align:left;" class="queryName"><a href="/open/Apps/appinit?appid=100072">ceshiapp123456</a></td>
+					<td>100072</td>
+					<td>站内应用</td>
+					<td>
+																	开发中											</td>
+					<td>2015-07-13 14:33:43</td>
+					<td>
+						<a href="/open/Apps/editBaseInfo?appid=100072">编辑信息</a><br>
+						<a class="del-app" href="#" data-appname="ceshiapp123456" data-appid="100072">删除应用</a>
+					</td>
+				</tr>				<tr style="display: table-row;">					<td valign="middle" style="text-align:right;">
+					<a href="/open/Apps/appinit?appid=100071">
+									              <img src="http://static.dev-5.tiup.us//open/img/default_icon.png" alt="" width="50px" height="50px">
+					</a></td>
+					<td valign="middle" style="text-align:left;" class="queryName"><a href="/open/Apps/appinit?appid=100071">ceshiapp12345</a></td>
+					<td>100071</td>
+					<td>站内应用</td>
+					<td>
+																	开发中											</td>
+					<td>2015-07-13 14:32:01</td>
+					<td>
+						<a href="/open/Apps/editBaseInfo?appid=100071">编辑信息</a><br>
+						<a class="del-app" href="#" data-appname="ceshiapp12345" data-appid="100071">删除应用</a>
+					</td>
+				</tr><tr bgcolor="#f2f2f2" style="display: table-row;">
+									<td valign="middle" style="text-align:right;">
+					<a href="/open/Apps/appinit?appid=100070">
+									              <img src="http://static.dev-5.tiup.us//open/img/default_icon.png" alt="" width="50px" height="50px">
+					</a></td>
+					<td valign="middle" style="text-align:left;" class="queryName"><a href="/open/Apps/appinit?appid=100070">ceshiapp1234</a></td>
+					<td>100070</td>
+					<td>站内应用</td>
+					<td>
+																	开发中											</td>
+					<td>2015-07-13 14:27:27</td>
+					<td>
+						<a href="/open/Apps/editBaseInfo?appid=100070">编辑信息</a><br>
+						<a class="del-app" href="#" data-appname="ceshiapp1234" data-appid="100070">删除应用</a>
+					</td>
+				</tr>				<tr style="display: table-row;">					<td valign="middle" style="text-align:right;">
+					<a href="/open/Apps/appinit?appid=100069">
+									              <img src="http://static.dev-5.tiup.us//open/img/default_icon.png" alt="" width="50px" height="50px">
+					</a></td>
+					<td valign="middle" style="text-align:left;" class="queryName"><a href="/open/Apps/appinit?appid=100069">ceshiapp123</a></td>
+					<td>100069</td>
+					<td>站内应用</td>
+					<td>
+																	开发中											</td>
+					<td>2015-07-13 14:26:01</td>
+					<td>
+						<a href="/open/Apps/editBaseInfo?appid=100069">编辑信息</a><br>
+						<a class="del-app" href="#" data-appname="ceshiapp123" data-appid="100069">删除应用</a>
+					</td>
+				</tr><tr bgcolor="#f2f2f2" style="display: table-row;">
+									<td valign="middle" style="text-align:right;">
+					<a href="/open/Apps/appinit?appid=100068">
+									              <img src="http://static.dev-5.tiup.us//open/img/default_icon.png" alt="" width="50px" height="50px">
+					</a></td>
+					<td valign="middle" style="text-align:left;" class="queryName"><a href="/open/Apps/appinit?appid=100068">ceshiapp12</a></td>
+					<td>100068</td>
+					<td>站内应用</td>
+					<td>
+																	开发中											</td>
+					<td>2015-07-13 14:25:14</td>
+					<td>
+						<a href="/open/Apps/editBaseInfo?appid=100068">编辑信息</a><br>
+						<a class="del-app" href="#" data-appname="ceshiapp12" data-appid="100068">删除应用</a>
+					</td>
+				</tr>				<tr style="display: table-row;">					<td valign="middle" style="text-align:right;">
+					<a href="/open/Apps/appinit?appid=100067">
+						<img src="http://static.dev-5.tiup.us//open/img/default_icon.png" alt="" width="50px" height="50px">
+					</a></td>
+					<td valign="middle" style="text-align:left;" class="queryName"><a href="/open/Apps/appinit?appid=100067">ceshiapp1</a></td>
+					<td>100067</td>
+					<td>站内应用</td>
+					<td>
+											已上线										</td>
+					<td>2015-07-13 12:14:32</td>
+					<td>
+						<a href="/open/Apps/editBaseInfo?appid=100067">编辑信息</a><br>
+						<a class="del-app" href="#" data-appname="ceshiapp1" data-appid="100067">删除应用</a>
+					</td>
+				</tr><tr bgcolor="#f2f2f2" style="display: table-row;">
+									<td valign="middle" style="text-align:right;">
+					<a href="/open/Apps/appinit?appid=100066">
+									              <img src="http://static.dev-5.tiup.us//open/img/default_icon.png" alt="" width="50px" height="50px">
+					</a></td>
+					<td valign="middle" style="text-align:left;" class="queryName"><a href="/open/Apps/appinit?appid=100066">测试app</a></td>
+					<td>100066</td>
+					<td>站内应用</td>
+					<td>
+																	开发中											</td>
+					<td>2015-07-13 12:09:33</td>
+					<td>
+						<a href="/open/Apps/editBaseInfo?appid=100066">编辑信息</a><br>
+						<a class="del-app" href="#" data-appname="测试app" data-appid="100066">删除应用</a>
+					</td>
+				</tr>				<tr style="display: table-row;">					<td valign="middle" style="text-align:right;">
+					<a href="/open/Apps/appinit?appid=100061">
+									              <img src="http://static.dev-5.tiup.us//open/img/default_icon.png" alt="" width="50px" height="50px">
+					</a></td>
+					<td valign="middle" style="text-align:left;" class="queryName"><a href="/open/Apps/appinit?appid=100061">32321233333134534</a></td>
+					<td>100061</td>
+					<td>站内应用</td>
+					<td>
+																	开发中											</td>
+					<td>2015-07-07 15:56:27</td>
+					<td>
+						<a href="/open/Apps/editBaseInfo?appid=100061">编辑信息</a><br>
+						<a class="del-app" href="#" data-appname="32321233333134534" data-appid="100061">删除应用</a>
+					</td>
+				</tr><tr bgcolor="#f2f2f2" style="display: table-row;">
+									<td valign="middle" style="text-align:right;">
+					<a href="/open/Apps/appinit?appid=100057">
+									              <img src="http://static.dev-5.tiup.us//open/img/default_icon.png" alt="" width="50px" height="50px">
+					</a></td>
+					<td valign="middle" style="text-align:left;" class="queryName"><a href="/open/Apps/appinit?appid=100057">1233333134534</a></td>
+					<td>100057</td>
+					<td>站内应用</td>
+					<td>
+																	开发中											</td>
+					<td>2015-07-07 15:36:02</td>
+					<td>
+						<a href="/open/Apps/editBaseInfo?appid=100057">编辑信息</a><br>
+						<a class="del-app" href="#" data-appname="1233333134534" data-appid="100057">删除应用</a>
+					</td>
+				</tr>				<tr class="queryNothing" style="display: none;">
+					<td colspan="6">o(╯□╰)o，没有这个应用！</td>
+				</tr>
+			</tbody></table>
+		</div>
+		<script type="text/javascript" src='front-end-search.js'></script>
+</body>
+</html>
